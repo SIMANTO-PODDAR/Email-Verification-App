@@ -1,6 +1,7 @@
 "use client"
 import GoogleLogin from '@/components/GoogleLogIn/GoogleLogin';
 import { authClient } from '@/lib/auth-client';
+import { sendEmail } from '@/lib/sendEmail';
 import { toast } from 'react-toastify';
 
 const LogInPage = () => {
@@ -18,6 +19,8 @@ const LogInPage = () => {
         })
         if (data) {
             toast.success('Log In Successfully!')
+
+            sendEmail(undefined, iptEmail, 'LogIn');
         }
 
         if (!data) {

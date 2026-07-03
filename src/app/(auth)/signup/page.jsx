@@ -2,6 +2,7 @@
 
 import GoogleLogin from '@/components/GoogleLogIn/GoogleLogin';
 import { authClient } from '@/lib/auth-client';
+import { sendEmail } from '@/lib/sendEmail';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
@@ -23,6 +24,8 @@ const SignUpPage = () => {
         if (data) {
             toast.success('Sign Up successful')
             router.push("/profile");
+
+            sendEmail(iptName, iptEmail, 'SignUp');
         }
 
         if (!data) {
