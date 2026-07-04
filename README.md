@@ -15,6 +15,8 @@
 
 ---
 
+### Server Repo: [email-verification-app-server](https://github.com/SIMANTO-PODDAR/email-verification-app-server.git)
+
 ## 🌟 Overview
 
 The **Email Verification App** is an authentication system built on top of **Next.js 16 (App Router)**. It provides a seamless, secure user authentication experience with:
@@ -61,6 +63,7 @@ It also connects to a separate **external email verification backend** that hand
 
 | Technology | Version | Purpose |
 |---|---|---|
+| **Nodemailer** | 9.0.3 | For sending emails |
 | **Better Auth** | 1.6.23 | Authentication framework |
 | **@better-auth/mongo-adapter** | 1.6.23 | MongoDB adapter for Better Auth |
 | **MongoDB** | 7.4.0 | NoSQL database driver |
